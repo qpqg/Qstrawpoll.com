@@ -23,6 +23,7 @@ def strawpoll(pid, vote):
              "Accept-Encoding": "gzip, deflate, br",
              "Accept-Language": "en-US,en;q=0.8"}
         resp = c.post("https://strawpoll.com/vote?", data=data, headers=h)
+        print resp
         c.get("https://strawpoll.com/refresh")
         c.cookies.clear()
         c.cookies.keys()
